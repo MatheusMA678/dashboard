@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --bg-color: #292738;
+  --card-color: #363447;
+  --light-gray: #4a4556;
+  --light-green: #81fbb8;
+  --light-green-gradient: #90f7ec;
+  --dark-green-gradient: #32ccbc;
+  --light-purple-gradient: #ce9ffc;
+  --dark-purple-gradient: #7367f0;
+  --orange-gradient: #df9780;
+  --purple-gradient: #a66de9;
+  --first-gradient: linear-gradient(-45deg, #7367f0, #ce9ffc);
+  --second-gradient: linear-gradient(-45deg, #df9780, #a66de9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: white;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4rem;
+  padding: 5rem;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: 20vw repeat(2, 1fr);
+  gap: 2rem;
+  height: 60vh;
+}
+
+.bottom-section {
+  background: var(--card-color);
+  border-radius: 10px;
+}
+
+.cards {
+  background: var(--card-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  transition: 0.2s;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+}
+
+.center-card-1 span {
+  color: var(--light-green);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.center-card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bottom-card-1 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.svg {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  /* background-color: var(--light-gray); */
+}
+
+.outer {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  padding: 30px;
+}
+
+.inner {
+  height: 140px;
+  width: 140px;
+  background: var(--card-color);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.porcentagem {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+#first-circle,
+#second-circle {
+  fill: none;
+  stroke-width: 30px;
+  stroke-dasharray: 530;
+  stroke-dashoffset: 530;
+}
+
+#first-circle {
+  stroke: url(#GradientColorFirst);
+  animation: progressTo70 2s linear forwards;
+}
+
+#second-circle {
+  stroke: url(#GradientColorSecond);
+  animation: progressTo90 2s 0.5s linear forwards;
+}
+
+.bottom-card-2,
+.bottom-card-3 {
+  display: flex;
+  gap: 1rem;
+}
+
+.bottom-card-2 span,
+.bottom-card-3 span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.span-circle,
+.second-span-circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background: var(--light-gray);
+}
+
+.bottom-card-2 span:nth-child(even) div {
+  background: var(--first-gradient);
+}
+
+.bottom-card-3 span:nth-child(even) div {
+  background: var(--second-gradient);
+}
+
+.bottom-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: 0.2s;
+}
+
+.bottom-section:hover {
+  transform: scale(1.05);
+}
+
+.bottom-section-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.left-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.top-left-div,
+.bottom-left-div {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.top-left-div div span,
+.bottom-left-div div span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.top-left-div h2,
+.bottom-left-div h2 {
+  font-size: 24px;
+  font-weight: 400;
+}

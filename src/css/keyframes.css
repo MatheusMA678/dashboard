@@ -1,0 +1,11 @@
+@keyframes progressTo70 {
+  100% {
+    stroke-dashoffset: 159;
+  }
+}
+
+@keyframes progressTo90 {
+  100% {
+    stroke-dashoffset: 53;
+  }
+}
