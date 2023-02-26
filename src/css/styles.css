@@ -27,20 +27,14 @@ body {
   background: var(--bg-color);
   color: white;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 4rem;
+  grid-template-rows: 60vh 50vh;
+  grid-template-columns: 20vw repeat(2, 1fr);
+  gap: 2rem;
   padding: 5rem;
 }
 
 body::-webkit-scrollbar {
   display: none;
-}
-
-.top-section {
-  display: grid;
-  grid-template-columns: 20vw repeat(2, 1fr);
-  gap: 2rem;
-  height: 60vh;
 }
 
 .bottom-section {
@@ -57,6 +51,10 @@ body::-webkit-scrollbar {
   align-items: center;
   padding: 2rem;
   transition: 0.2s;
+}
+
+.cards h1 {
+  text-align: center;
 }
 
 .cards:hover {
@@ -86,7 +84,6 @@ body::-webkit-scrollbar {
   height: 200px;
   width: 200px;
   position: relative;
-  /* background-color: var(--light-gray); */
 }
 
 .outer {
@@ -171,6 +168,7 @@ svg {
 }
 
 .bottom-section {
+  grid-column: span 3;
   padding: 2rem;
   display: flex;
   flex-direction: column;
